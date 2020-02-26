@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: docap
+spec:
+  containers:
+  - name: docap
+    image: docap-test
+    ports:
+      - containerPort: 5000

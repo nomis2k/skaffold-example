@@ -1,0 +1,15 @@
+apiVersion: skaffold/v2alpha4
+kind: Config
+metadata:
+  name: skaffold-example
+build:
+  artifacts:
+  - image: docap-test
+deploy:
+  kubectl:
+    manifests:
+    - pod.yml
+portForward:
+  - resourceType: pod
+    resourceName: docap
+    port: 5000
